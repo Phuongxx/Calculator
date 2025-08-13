@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <script type="module" src="/src/Java-Script/logic.js"></script>
+  </head>
+  <body>
+    <main class="calculator">
+      <section class="calculator__panel">
+        <div class="calculator__input">
+          <input type="text" class="calculator__display-intermediate" />
+          <input type="text" class="calculator__display-keys" />
+        </div>
+        <div class="calculator__keys">
+          <button class="calculator__key calculator__key--hightlight">
+            &#8730;</button
+          ><button class="calculator__key calculator__key--hightlight">
+            x&#178;</button
+          ><button class="calculator__key calculator__key--hightlight">
+            CE</button
+          ><button class="calculator__key calculator__key--hightlight">
+            <svg
+              id="Arrow_Pointing_Left_24"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect
+                width="24"
+                height="24"
+                stroke="none"
+                fill="#000000"
+                opacity="0"
+              />
+
+              <g transform="matrix(0.95 0 0 0.95 12 12)">
+                <path
+                  style="
+                    stroke: none;
+                    stroke-width: 1;
+                    stroke-dasharray: none;
+                    stroke-linecap: butt;
+                    stroke-dashoffset: 0;
+                    stroke-linejoin: miter;
+                    stroke-miterlimit: 4;
+                    fill: rgb(0, 0, 0);
+                    fill-rule: nonzero;
+                    opacity: 1;
+                  "
+                  transform=" translate(-11.5, -12)"
+                  d="M 9 4 L 1 12 L 9 20 L 9 15 L 21 15 C 21.552 15 22 14.552 22 14 L 22 10 C 22 9.448 21.552 9 21 9 L 9 9 L 9 4 L 9 4 z"
+                  stroke-linecap="round"
+                />
+              </g>
+            </svg>
+          </button>
+          <button class="calculator__key">0</button
+          ><button class="calculator__key">0</button
+          ><button class="calculator__key">0</button
+          ><button class="calculator__key calculator__key--hightlight">/</button
+          ><button class="calculator__key">7</button
+          ><button class="calculator__key">8</button
+          ><button class="calculator__key">9</button
+          ><button class="calculator__key calculator__key--hightlight">x</button
+          ><button class="calculator__key">4</button>
+          <button class="calculator__key">5</button
+          ><button class="calculator__key">6</button
+          ><button class="calculator__key calculator__key--hightlight">-</button
+          ><button class="calculator__key">1</button>
+          <button class="calculator__key">2</button
+          ><button class="calculator__key">3</button
+          ><button class="calculator__key calculator__key--hightlight">+</button
+          ><button class="calculator__key">CL</button>
+          <button class="calculator__key">0</button
+          ><button class="calculator__key">,</button
+          ><button class="calculator__key calculator__key--hightlight">
+            =
+          </button>
+        </div>
+      </section>
+      <section class="calculator__result">
+        <div class="calculator__result-display"></div>
+      </section>
+    </main>
+  </body>
+</html>
