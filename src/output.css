@@ -44,10 +44,10 @@
 .calculator__key:hover {
   background-color: rgb(0, 0, 0);
 }
-.calculator__key--hightlight {
+.calculator__key--operator {
   background-color: #ff9430;
 }
-.calculator__key--hightlight:hover {
+.calculator__key--operator:hover {
   background-color: #ff8000;
 }
 .calculator__result {
@@ -56,7 +56,10 @@
   border-left: solid 1px #adadad;
   margin-left: 2rem;
 }
-.calculator__display-intermediate, .calculator__display-keys, .calculator__result-display, .calculator__key {
+.calculator__display-intermediate,
+.calculator__display-keys,
+.calculator__result-display,
+.calculator__key {
   font-size: 2rem;
 }
 .calculator input:focus {

@@ -6,34 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="src/output.css" />
-    <script type="module" src="src/Java-Script/logic.js"></script>
   </head>
   <body>
     <main class="calculator">
       <section class="calculator__panel">
         <div class="calculator__input">
-          <input type="text" class="calculator__display-intermediate" />
-          <input type="text" class="calculator__display-keys" id="display" />
+          <input
+            type="text"
+            class="calculator__display-intermediate"
+            id="interimState"
+          />
+          <input
+            type="text"
+            class="calculator__display-keys"
+            id="currentInput"
+            value="0"
+          />
         </div>
         <div class="calculator__keys">
           <button
-            class="calculator__key calculator__key--hightlight"
-            onclick="appendToDisplay('√')"
+            class="calculator__key calculator__key--operator"
+            onclick="root('√')"
           >
             &#8730;</button
           ><button
-            class="calculator__key calculator__key--hightlight"
-            onclick="appendToDisplay('x²')"
+            class="calculator__key calculator__key--operator"
+            onclick="square('^2')"
           >
             x&#178;</button
           ><button
-            class="calculator__key calculator__key--hightlight"
-            onclick="clearDisplay()"
+            class="calculator__key calculator__key--operator"
+            onclick="clearEntry()"
           >
             CE</button
           ><button
-            class="calculator__key calculator__key--hightlight"
-            onclick="deleteLastCharacter()"
+            class="calculator__key calculator__key--operator"
+            onclick="deleteLast()"
           >
             <svg
               id="Arrow_Pointing_Left_24"
@@ -72,71 +80,53 @@
               </g>
             </svg>
           </button>
-          <button class="calculator__key" onclick="appendToDisplay('0')">
-            0
-          </button>
-          <button class="calculator__key" onclick="appendToDisplay('0')">
-            0</button
-          ><button class="calculator__key" onclick="appendToDisplay('0')">
-            0</button
+          <button class="calculator__key" onclick="number(0)">0</button>
+          <button class="calculator__key" onclick="number(0)">0</button
+          ><button class="calculator__key" onclick="number(0)">0</button
           ><button
-            class="calculator__key calculator__key--hightlight"
-            onclick="appendToDisplay('/')"
+            class="calculator__key calculator__key--operator"
+            onclick="divide('/')"
           >
             /</button
-          ><button class="calculator__key" onclick="appendToDisplay('7')">
-            7</button
-          ><button class="calculator__key" onclick="appendToDisplay('8')">
-            8</button
-          ><button class="calculator__key" onclick="appendToDisplay('9')">
-            9</button
+          ><button class="calculator__key" onclick="number(7)">7</button>
+          <button class="calculator__key" onclick="number(8)">8</button
+          ><button class="calculator__key" onclick="number(9)">9</button
           ><button
-            class="calculator__key calculator__key--hightlight"
-            onclick="appendToDisplay('*')"
+            class="calculator__key calculator__key--operator"
+            onclick="multiply('*')"
           >
             x</button
-          ><button class="calculator__key" onclick="appendToDisplay('4')">
-            4
-          </button>
-          <button class="calculator__key" onclick="appendToDisplay('5')">
-            5</button
-          ><button class="calculator__key" onclick="appendToDisplay('6')">
-            6</button
+          ><button class="calculator__key" onclick="number(4)">4</button>
+          <button class="calculator__key" onclick="number(5)">5</button
+          ><button class="calculator__key" onclick="number(6)">6</button
           ><button
-            class="calculator__key calculator__key--hightlight"
-            onclick="appendToDisplay('-')"
+            class="calculator__key calculator__key--operator"
+            onclick="subtract('-')"
           >
             -</button
-          ><button class="calculator__key" onclick="appendToDisplay('1')">
-            1
-          </button>
-          <button class="calculator__key" onclick="appendToDisplay('2')">
-            2</button
-          ><button class="calculator__key" onclick="appendToDisplay('3')">
-            3</button
+          ><button class="calculator__key" onclick="number(1)">1</button>
+          <button class="calculator__key" onclick="number(2)">2</button
+          ><button class="calculator__key" onclick="number(3)">3</button
           ><button
-            class="calculator__key calculator__key--hightlight"
-            onclick="appendToDisplay('+')"
+            class="calculator__key calculator__key--operator"
+            onclick="addition('+')"
           >
             +</button
-          ><button class="calculator__key" onclick="appendToDisplay('CL')">
-            CL
-          </button>
-          <button class="calculator__key" onclick="appendToDisplay('0')">
-            0</button
-          ><button class="calculator__key" onclick="appendToDisplay(',')">
-            ,</button
+          ><button class="calculator__key" onclick="clearList()">CL</button>
+          <button class="calculator__key" onclick="number(0)">0</button
+          ><button class="calculator__key">,</button
           ><button
-            class="calculator__key calculator__key--hightlight"
-            onclick="appendToDisplay('=')"
+            class="calculator__key calculator__key--operator"
+            onclick="calculate()"
           >
             =
           </button>
         </div>
       </section>
       <section class="calculator__result">
-        <div class="calculator__result-display"></div>
+        <div class="calculator__result-display" id="history"></div>
       </section>
     </main>
+    <script src="src/Java-Script/logic.js"></script>
   </body>
 </html>

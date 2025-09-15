@@ -51,11 +51,11 @@
     background-color: rgb(0, 0, 0);
   }
 
-  &__key--hightlight {
-    background-color: color.$hightlight-key;
+  &__key--operator {
+    background-color: color.$operator-key;
   }
 
-  &__key--hightlight:hover {
+  &__key--operator:hover {
     background-color: #ff8000;
   }
 
