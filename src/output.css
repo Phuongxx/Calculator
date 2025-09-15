@@ -56,10 +56,12 @@
   border-left: solid 1px #adadad;
   margin-left: 2rem;
 }
-.calculator__display-intermediate,
-.calculator__display-keys,
-.calculator__result-display,
-.calculator__key {
+.calculator__result-display {
+  text-align: right;
+  margin: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.calculator__display-intermediate, .calculator__display-keys, .calculator__result-display, .calculator__key {
   font-size: 2rem;
 }
 .calculator input:focus {

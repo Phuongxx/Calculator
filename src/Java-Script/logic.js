@@ -72,6 +72,11 @@ function clearList() {
   showHistory();
 }
 
+function deleteLast() {
+  currentInput = Math.floor(currentInput / 10);
+  updateCurrentInput(currentInput);
+}
+
 function performOperator() {
   let currentResult = previousInput;
 
